@@ -16,22 +16,23 @@ import javax.persistence.GenerationType;
 @Getter
 @Setter
 @Entity
-@Table(name="WB_PROJECT")
-public class project {
+@Table(name = "WB_PROJECT", schema = "C##CGKAT")
+public class Project {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "PROJECT_ID")
 	private Long id;
-	
-	@Column(name="PROJECT_NAME", length=128)
+
+	@Column(name = "PROJECT_NAME", length = 128)
 	private String name;
-	
-	@Column(name="CREATED_DATE")
+
+	@Column(name = "CREATED_DATE")
 	private Date createdDate;
-	
-	@Column(name="STATUS", length=128)
+
+	@Column(name = "STATUS", length = 128)
 	private String status;
-	
-	@Column(name="USER_ID")
+
+	@Column(name = "USER_ID")
 	private Long userId;
 }
